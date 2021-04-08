@@ -18,9 +18,10 @@ controller.edit = (req, res) => {
     const { id } = req.params;
     req.getConnection((err, conn) => {
         conn.query("SELECT * FROM hijo WHERE hijode = ?", [id], (err, rows) => {
-            console.log(rows)
-            res.render('hijo', {
-                data: rows[0]
+            console.error('consulta:')
+            console.log(rows[1].id)
+            res.render('resConsulta1', {
+                data: rows
             })
         });
     });
