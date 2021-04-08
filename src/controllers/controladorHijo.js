@@ -16,13 +16,24 @@ controller.list = (req, res) => {
 controller.save = (req, res) => {
   const data = req.body;
   req.getConnection((err, conn) => {
-    conn.query(`INSERT INTO hijo set id=${data.id},nom='${data.nom}',hijode=${data.hijode}`, (err, hijo) => {
-      if (err) {
-        res.redirect('/hijo')
-      } else {
-        res.redirect('/hijo')
-      }
-    })
+    if (data.hijode.length == 0) {
+      conn.query(`INSERT INTO hijo set id=${data.id},nom='${data.nom}',hijode=NULL`, (err, hijo) => {
+        if (err) {
+          res.redirect('/hijo')
+        } else {
+          res.redirect('/hijo')
+        }
+      });
+    } else {
+      conn.query(`INSERT INTO hijo set id=${data.id},nom='${data.nom}',hijode=${data.hijode}`, (err, hijo) => {
+        if (err) {
+          res.redirect('/hijo')
+        } else {
+          res.redirect('/hijo')
+        }
+      });
+    }
+
   })
 };
 
