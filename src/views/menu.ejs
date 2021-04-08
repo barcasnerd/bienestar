@@ -1,16 +1,83 @@
 <% include partials/_header %>
-<h1>CRUD</h1> 
-<a href="/hijo">CRUD tabla hijo</a>
-<br>
-<a href="/padre">CRUD tabla padre</a>
-<br>
-<h1>CONSULTAS</h1> 
-<a href="/consultas/hdp">Hijos de un padre seleccionado</a>
-<br>
-<a href="/consultas/psh">Padres sin hijos</a>
-<br>
-<a href="/consultas/hsp">Hijos de un padre seleccionado</a>
-<br>
-<a href="/consultas/pnh">Hijos de un padre seleccionado</a>
-<br>
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <span></span>
+      </div>
+      <div class="col-8">
+        
+        <div class="card mt-5">
+            <div class="card-header">
+              CRUD
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Acceso a tabla HIJO</h5>
+              <p class="card-text">Crea, actualiza, elimina o agrega información a la tabla hijo</p>
+              <a href="/hijo" class="btn btn-success">Editar</a>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-header">
+              CRUD
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Acceso a tabla PADRE</h5>
+              <p class="card-text">Crea, actualiza, elimina o agrega información a la tabla padre.</p>
+              <a href="/padre" class="btn btn-success">Editar</a>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-header">
+              CONSULTAS
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Hijos de un padre seleccionado</h5>
+              <p class="card-text">Selecciona un padre de la tabla para ver todos sus hijos asociados.</p>
+              <a href="#" class="btn btn-success">Información</a>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-header">
+              CONSULTAS
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Padres sin hijos</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success">Informacion</a>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-header">
+              CONSULTAS
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Hijos sin padres</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success">Información</a>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-header">
+              CONSULTAS
+            </div>
+            <div class="card-body mb-5">
+              <h5 class="card-title">Padres con numero de hijos</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success">Información</a>
+            </div>
+          </div>
+
+      </div>
+      <div class="col">
+        <span></span>
+      </div>
+    </div>
+</div>
+
 <% include partials/_footer %>
