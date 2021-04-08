@@ -42,4 +42,18 @@ controller.hijoSinPadre = (req, res) => {
 };
 
 
+controller.padreSinHijo = (req, res) => {
+    req.getConnection((err, conn) => {
+        conn.query('SELECT * FROM padre p WHERE NOT EXISTS(SELECT NULL FROM hijo h WHERE h.hijode=P.id)', (err, padre) => {
+            if (err) {
+                res.json(err);
+            }
+            res.render('formConsulta1', {
+                data: padre
+            });
+        });
+    });
+};
+
+
 module.exports = controller;
