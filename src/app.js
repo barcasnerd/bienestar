@@ -10,7 +10,7 @@ const app = express();
 const rutaMenu = require('./routes/menu');
 const rutaHijo = require('./routes/hijo');
 const rutaPadre = require('./routes/padre');
-const rutaConsultas = require('./routes/consultas');
+const rutaConsulta1 = require('./routes/consulta1');
 
 
 // configuraciones de puerto
@@ -33,7 +33,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', rutaMenu);
 app.use('/hijo', rutaHijo);
 app.use('/padre', rutaPadre);
-app.use('/consultas',rutaConsultas);
+app.use('/consulta1', rutaConsulta1);
+
 
 
 // indicando los archivos publicos del lado del cliente
