@@ -28,5 +28,18 @@ controller.edit = (req, res) => {
 };
 
 
+controller.hijoSinPadre = (req, res) => {
+    req.getConnection((err, conn) => {
+        conn.query('SELECT * FROM hijo WHERE hijode IS NULL', (err, hijo) => {
+            if (err) {
+                res.json(err);
+            }
+            res.render('resConsulta1', {
+                data: hijo
+            });
+        });
+    });
+};
+
 
 module.exports = controller;
